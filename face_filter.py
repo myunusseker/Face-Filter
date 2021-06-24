@@ -68,7 +68,7 @@ while True:
             else:
                 filter_name = "dog_closed.png"
         
-        front_filter = cv2.imread(filter_name)
+        front_filter = cv2.imread('./filters/'+filter_name)
         front_filter = cv2.copyMakeBorder(front_filter, 500, 500, 500, 500, cv2.BORDER_CONSTANT, value=[0,0,0,0])
         rotation = -atan2(right_eye[1]-left_eye[1],right_eye[0]-left_eye[0])/pi*180
         if filter_name != "bar.png":
